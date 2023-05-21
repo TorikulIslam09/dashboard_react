@@ -1,0 +1,47 @@
+.heder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-bottom: 0.5px solid gray;
+    .search {
+        border: 0.5px solid gray;
+        padding:5px;
+        input {
+            border: none;
+            outline: 0;
+            padding: 0 5px;
+            &::placeholder {
+                padding: 5px;
+            }
+        }
+    }
+    .items-der {
+        display: flex;
+        align-items: center;
+        .items {
+            margin-left: 30px;
+            span {
+                font-size: 14px;
+            }
+            svg {
+                font-size: 20px;
+                color: #000;
+            }
+            .notification {
+                height: 15px;
+                width: 15px;
+                position: absolute;
+                background: red;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                border-radius: 50%;
+                font-size: 10px;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}

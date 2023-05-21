@@ -1,0 +1,88 @@
+.card-parents {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    .card_items {
+        padding: 32px 24px;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 5px 22px, rgba(0, 0, 0, 0.03) 0px 0px 0px 0.5px;
+        .card-body {
+          display: flex;
+          justify-content: space-between;  
+          align-items: center;
+          .card-content {
+            span {
+                margin: 0px;
+                font-size: 0.75rem;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                line-height: 2.5;
+                text-transform: uppercase;
+                color: rgb(108, 115, 127);
+            }
+            h4 {
+                font-family: "Plus Jakarta Sans", sans-serif;
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+          }
+          .card-icon {
+            position: relative;
+            display: flex;
+            -moz-box-align: center;
+            align-items: center;
+            -moz-box-pack: center;
+            justify-content: center;
+            flex-shrink: 0;
+            line-height: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            user-select: none;
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0px;
+            background-color: rgb(240, 68, 56);
+            height: 56px;
+            width: 56px;
+          }
+        }
+        p {
+            font-size: 12px;
+            span {
+                user-select: none;
+                fill: currentcolor;
+                flex-shrink: 0;
+                transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                font-size: 16px;
+                color: rgb(16, 185, 129);
+            }
+        }
+        .progress-count {
+            position: relative;
+            &::after {
+                position: absolute;
+                height: 4px;
+                width: 80%;
+                background-color: rgb(195, 196, 249);
+                content: "";
+                top: 25px;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                width: 50%;
+                background-color: rgb(99, 102, 241);
+                height: 4px;
+                top: 25px;
+                z-index: 9;
+            }
+        }
+       
+    }
+}
+.chard-container {
+    margin-top: 30px;
+    padding: 32px 24px;
+    column-gap: 30px;
+}

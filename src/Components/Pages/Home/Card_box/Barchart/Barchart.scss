@@ -1,0 +1,14 @@
+.chart-items {
+    column-gap: 30px;
+    justify-content: center;
+    .piechart {
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 5px 22px, rgba(0, 0, 0, 0.03) 0px 0px 0px 0.5px;
+        padding: 32px 24px;
+    }
+    .barchart {
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 5px 22px, rgba(0, 0, 0, 0.03) 0px 0px 0px 0.5px;
+        padding: 32px 24px;
+    
+    }
+}
+

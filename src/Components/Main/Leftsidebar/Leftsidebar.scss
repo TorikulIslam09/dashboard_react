@@ -1,0 +1,35 @@
+ 
+.leftsidebar {
+    height: 100vh;
+    border-right: 1px solid lightgray;
+    
+    .logo {
+        height: 59px;
+        line-height: 57px;
+        border-bottom: 0.5px solid gray;
+        p {
+            margin-bottom: 0;
+            font-size: 21px;
+            font-weight: 800;
+            color: #8e44ad;
+            text-align: center;
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        p {
+            font-size: 16px;
+            line-height: 22px;
+            padding-top: 22px;
+        }
+        li{
+            svg {
+                color: #70a1ff;
+                padding-right: 5px;
+            }
+        }
+    }
+
+}
