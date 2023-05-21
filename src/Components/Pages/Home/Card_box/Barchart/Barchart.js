@@ -129,15 +129,13 @@ const Barchart = () => {
       ];
     
     return (
-        <div className='d-flex chart-items'>
-        
-      
-        <div className="barchart">
+        <div className='chart-items'>
+        <div className="barchart w-100">
             <div className="sells-chart d-flex justify-content-between mb-4 px-2">
             <span className='fw-bold'>Sales</span>
             <button type="button" class="btn btn-light"> <span> <SyncIcon/> </span>Sync </button>
             </div>
-            <ComposedChart width={730} height={250} data={data}>
+            <ComposedChart data={data} width={340} className='' height={300}>
                 <XAxis dataKey="name"></XAxis>
                 <Tooltip></Tooltip>
                 <Legend></Legend>
@@ -150,7 +148,7 @@ const Barchart = () => {
         </div>
 
         <div className="piechart">
-            <PieChart width={730} height={250}>
+            <PieChart width={340} height={250}>
             <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
             <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" ></Pie>
             </PieChart>

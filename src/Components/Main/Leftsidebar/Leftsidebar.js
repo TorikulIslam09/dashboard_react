@@ -25,7 +25,7 @@ const Leftsidebar = () => {
                     <li> <DashboardIcon/> <Link to="/">Dashboard</Link> </li>
                     <p className="title m-0">List</p>
                     <li> <Person2OutlinedIcon/>  users </li>
-                    <li> <Inventory2Icon/> Product </li>                   
+                    <li> <Inventory2Icon/> <Link to="/product">Product</Link> </li>                   
                     <li> <FilterFramesIcon/> Order </li>
                     <li> <AirportShuttleIcon/> Delivery </li>
                     <p className="title m-0">Usefull</p>

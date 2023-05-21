@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import VerticalAlignTopIcon from '@mui/icons-material/VerticalAlignTop';
 import './Card_box.scss';
@@ -7,8 +7,16 @@ import VerticalAlignBottomIcon from '@mui/icons-material/VerticalAlignBottom';
 import FormatListNumberedRtlIcon from '@mui/icons-material/FormatListNumberedRtl';
 import Barchart from './Barchart/Barchart';
 import Latest_product_order from './Latest_product_order/Latest_product_order';
-
+import Order_product from './Latest_product_order/Order_product/Order_product';
+import { Link } from 'react-router-dom';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 const Card_box = () => {
+    const [orderProduct, setOrderProduct] = useState([]);
+    useEffect(() => {
+        fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(data => setOrderProduct(data.products))
+    },[])
     return (
         <div>
             <div className="card-parents">
@@ -38,8 +46,6 @@ const Card_box = () => {
                     </div>
                     <p> <span className='text-danger'><VerticalAlignBottomIcon/> 16% month </span> Since last month</p>
                 </div>
-
-
                 <div className="card_items">
                     <div className="card-body">
                         <div className="card-content">
@@ -78,7 +84,15 @@ const Card_box = () => {
                     <div className="col-lg-4">
                         <Latest_product_order/>
                     </div>
-                    <div className="col-lg-8"></div>
+                    <div className="col-lg-8">
+                        <h3>Product Order </h3>
+                        {
+                            orderProduct.map(orders => <Order_product orders={orders} key={orders.id}/>).slice(0, 11)
+                        }
+                        <div className="btn-div text-end">
+                            <Link to='/product'> <button type="button" class="btn btn-outline-secondary">View All <ArrowRightAltIcon/></button> </Link>        
+                        </div>
+                    </div>
                 </div>
             </div>
 

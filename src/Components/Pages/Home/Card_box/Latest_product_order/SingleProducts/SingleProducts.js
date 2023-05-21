@@ -1,10 +1,11 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const SingleProducts = () => {
     const singleItems = useLoaderData();
     const {title,description,price,stock,category,images} = singleItems
     console.log(singleItems)
+    const navigate = useNavigate()
     return (
         <div>
             <div class="card mb-3">
@@ -17,6 +18,8 @@ const SingleProducts = () => {
                 <p class="card-text">Category: {category}</p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-outline-primary" onClick={() => navigate(-1)} > Go Back </button>            </div>
             </div>
         </div>
     );

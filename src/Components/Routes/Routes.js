@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
             element:<Home></Home>
         },
         { 
-            path:'vewall',
+            path:'product',
             element:<Vewall_product/>,
             loader:() => {
                 return fetch('https://dummyjson.com/products')

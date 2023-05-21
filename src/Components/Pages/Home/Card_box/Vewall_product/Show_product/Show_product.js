@@ -18,6 +18,7 @@ const Show_product = ({items}) => {
                    <Link to={`/details/${id}`}> <button class="btn btn-primary w-100" type="button">Vew Deatils</button> </Link>
                 </div>
                 </div>
+
             </div>
         
     );

@@ -21,7 +21,7 @@ const Latest_product_order = () => {
             }
 
             <div className="btn-div text-end">
-                <Link to='/vewall'> <button type="button" class="btn btn-outline-secondary">View All <ArrowRightAltIcon/></button> </Link>        
+                <Link to='/product'> <button type="button" class="btn btn-outline-secondary">View All <ArrowRightAltIcon/></button> </Link>        
             </div>
         </div>
     );
