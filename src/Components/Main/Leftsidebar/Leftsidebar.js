@@ -24,7 +24,7 @@ const Leftsidebar = () => {
                     <p className="muted m-0">Main</p>
                     <li> <DashboardIcon/> <Link to="/">Dashboard</Link> </li>
                     <p className="title m-0">List</p>
-                    <li> <Person2OutlinedIcon/>  users </li>
+                    <li> <Person2OutlinedIcon/> <Link to="/customers">Customers</Link> </li>
                     <li> <Inventory2Icon/> <Link to="/product">Product</Link> </li>                   
                     <li> <FilterFramesIcon/> Order </li>
                     <li> <AirportShuttleIcon/> Delivery </li>
@@ -36,7 +36,7 @@ const Leftsidebar = () => {
                     <li> <PsychologyIcon/> Logs </li>
                     <li> <SettingsIcon/> Settings </li>
                     <p className="title m-0">Profile</p>
-                    <li> <AccountBoxIcon/> Profile </li>
+                    <li> <AccountBoxIcon/> <Link to='/login'>Login</Link> </li>
                     <li> <LogoutIcon/> Logout </li>
                 </ul>
 

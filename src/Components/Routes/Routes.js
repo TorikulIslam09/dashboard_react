@@ -7,6 +7,7 @@ import Single from "../Pages/Single/Single";
 import Main from "../Main/Main";
 import Vewall_product from "../Pages/Home/Card_box/Vewall_product/Vewall_product";
 import SingleProducts from "../Pages/Home/Card_box/Latest_product_order/SingleProducts/SingleProducts";
+import Customers from "../Pages/Customers/Customers";
 
 export const router = createBrowserRouter([
 {
@@ -38,8 +39,8 @@ export const router = createBrowserRouter([
             
         },
         {
-            path:'list',
-            element:<List/>
+            path:'customers',
+            element:<Customers/>
         },
         {
             path:'news',
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
         {
             path:'single',
             element:<Single/>
+        },
+        {
+            path:'login',
+            element:<Login/>
         },
     ]
 }
