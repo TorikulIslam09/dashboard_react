@@ -14,7 +14,7 @@ const Main = () => {
         
       <Row>
    
-        <Col lg={2} className='pe-0'>
+        <Col lg={2} className='pe-0 bg-dark'>
             <Leftsidebar/>
         </Col>
         <Col lg={10} className='ps-0 '>

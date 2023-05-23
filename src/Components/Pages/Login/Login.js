@@ -5,9 +5,11 @@ import './Login.scss';
 import Carousel from 'react-bootstrap/Carousel';
 import Slide from '../../assets/Slide.png'
 import Slide2 from '../../assets/Slide2.jpg'
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const { Login } = useContext(Authcontext)
+    const navigate = useNavigate();
 
     const Login_now = e => {
         e.preventDefault()
@@ -17,16 +19,21 @@ const Login = () => {
         Login(email, password)
             .then(result => {
                 const user = result.user;
+                navigate('/login')
+                console.log(user)
             })
             .catch(error => {
                 console.log('erorer khaici', error)
+                navigate('/ragister')
             })
     }
 
     return (
         <div className='loginform'>
+          
             <div className="row vh-100 w-100 align-items-center">
                 <div className="col-lg-6">
+                    <h1>Please Login Now</h1>
                     <div className="form">
                         <form onSubmit={Login_now}>
                             <div className="row mb-3">
@@ -41,7 +48,8 @@ const Login = () => {
                                     <input type="password" name='password' className="form-control" id="inputPassword3" />
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-primary">Sign in</button>
+                            <p> Create a new account <Link to="/ragister">Ragister Now</Link> </p>
+                            <button type="submit" className="btn btn-primary">Login Now</button>
                         </form>
                     </div>
                 </div>
