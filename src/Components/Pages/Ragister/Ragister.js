@@ -15,7 +15,7 @@ const Ragister = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                navigat('/')
+                navigat('/login')
             })
             .catch(error => {
                 console.log('erorer khaici', error)

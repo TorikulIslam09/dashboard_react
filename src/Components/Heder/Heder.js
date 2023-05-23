@@ -1,21 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Heder.scss'
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import AnnouncementIcon from '@mui/icons-material/Announcement';
 import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
+import { Authcontext } from '../AutheText/AutheText';
 
 const Heder = () => {
+    const {user} = useContext(Authcontext)
+
+        // const Logout_side = () => {
+        //     Logout()
+        //     .then(() => {
+        //         console.log('alert')
+        //     })
+        //     .catch((error) => {
+        //         // An error happened.
+        //       });
+        // }
+
     return (
         <div> 
 
             <div className="heder d-flex align-items-center justify-content-between">
-            <div className="search">
-                    <input type="text" placeholder='search......' />
-                    <SearchOutlinedIcon/>
-            </div>
+                <div className="search">
+                    {
+                        user && user.uid && <span>{user.email}</span>
+                    }
+                </div>
                 <div className="items-der">
                
                    <div className="items d-flex align-items-center">

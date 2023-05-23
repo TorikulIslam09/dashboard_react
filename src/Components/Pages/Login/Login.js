@@ -19,7 +19,7 @@ const Login = () => {
         Login(email, password)
             .then(result => {
                 const user = result.user;
-                navigate('/login')
+                navigate('/')
                 console.log(user)
             })
             .catch(error => {

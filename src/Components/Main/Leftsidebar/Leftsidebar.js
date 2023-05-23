@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Leftsidebar.scss';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
@@ -13,7 +13,25 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
+import { Authcontext } from '../../AutheText/AutheText';
+
+
 const Leftsidebar = () => {
+    const {user, logout} = useContext(Authcontext)
+
+    const logoutsites = () => {
+        logout()
+        .then(() => {
+            alert('yess you do it')
+        })
+        .catch(error => {
+            alert('eror khayce')
+        })
+    }
+    
+
+
+
     return (
         <div className='leftsidebar ps-2'>
             <div className="logo">
@@ -36,8 +54,16 @@ const Leftsidebar = () => {
                     <li> <PsychologyIcon/> Logs </li>
                     <li> <SettingsIcon/> Settings </li>
                     <p className="title m-0">Profile</p>
-                    <li> <AccountBoxIcon/> <Link to='/login'>Login</Link> </li>
-                    <li> <LogoutIcon/> Logout </li>
+                    {
+                        user && user.uid? <>
+                            <li> 
+                                <button type="button" class="btn btn-outline-danger" onClick={logoutsites}><LogoutIcon/> LogOut</button> 
+                            </li>
+                        </>
+                        :<li> <AccountBoxIcon/> <Link to='/login'>Login</Link> </li>
+                    }
+                    
+                    
                 </ul>
 
             </div>
