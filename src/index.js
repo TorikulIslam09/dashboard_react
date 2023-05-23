@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Authcontext from './Components/Authcontext/Authcontext';
+import AutheText from './Components/AutheText/AutheText';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Authcontext>
+    <AutheText>
+
       <App />
-    </Authcontext>
+      
+    </AutheText>
   </React.StrictMode>
 );
 
