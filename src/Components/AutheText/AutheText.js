@@ -4,7 +4,7 @@ import {
     createUserWithEmailAndPassword,
     getAuth,
     signInWithEmailAndPassword,
-    signOut
+    signOut,
 } from "firebase/auth";
 import app from '../Firebase/Firebase';
 
@@ -28,16 +28,24 @@ const AutheText = ({ children }) => {
         return signOut(auth)
     }
 
+
+    // const Updateprifile = profile => {
+    //    return updateProfile(auth.curentuser, profile)
+    // }
+
     useEffect(() => {
         const userunsubcribe = onAuthStateChanged(auth, (curentuser) => {
+           
+            setuser(curentuser);
             setLoder(false)
-            setuser(curentuser)
 
         })
-        return userunsubcribe()
+        return () => {
+            userunsubcribe()
+        } 
     }, [])
 
-    const Authvalue = { Ragister, Login, user, loader, logout }
+    const Authvalue = {Ragister, Login, user, loader, logout }
 
     return (
         <Authcontext.Provider value={Authvalue}>
